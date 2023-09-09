@@ -1,0 +1,140 @@
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=40mm,
+	right=20mm,
+	top=20mm,
+	bottom=20mm
+	%layouthoffset=2mm, % Bleed
+	%layoutvoffset=3mm,  % Bleed
+	%layoutheight=297mm,
+	%layoutwidth=210mm
+}
+
+
+% Fonts
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+%\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\renewcommand*{\familydefault}{\sfdefault}
+
+% Section heading font size
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\fontsize{11}{15}\bfseries}{\thesubsubsection}{1em}{}
+
+% No indentation for new paragraphs
+\setlength{\parindent}{0pt}
+
+% Line spacing
+\newcommand{\commonlinespread}{1.5}
+\newcommand{\toclinespread}{1.0}
+\linespread{\commonlinespread}
+
+% Section heading spacing
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 2pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 2pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 2pt minus 2pt}{6pt plus 2pt minus 2pt}
+
+% Header and footer
+\newcommand{\changehdrfont}{%
+	\fontsize{10}{11}\selectfont
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear fields
+\fancyhead[LE,RO]{\changehdrfont\leftmark}
+%\fancyhead[LE,RO]{\changehdrfont\rightmark}
+%\fancyhead[RE,LO]{\changehdrfont\thepage}
+%\fancyhead[RE,LO]{\chaptername\space\thechapter}
+%\fancyfoot[CE,CO]{Name}
+\fancyfoot[LE,RO]{\thepage}
+
+% TOC dots
+\usepackage{tocloft}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % for sections
+
+% Redefine chapter to include a page break after
+%\usepackage{letltxmacro}
+%\LetLtxMacro{\oldchapter}{\chapter}
+%\renewcommand{\chapter}[2][]{\oldchapter[#1]{#2}\vspace{\fill}\par\pagebreak}
+
+\usepackage[ngerman,english]{babel}
+\usepackage{breakurl}
+
+\usepackage{graphicx}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath, bm}
+\usepackage{hyphenat}
+\usepackage{siunitx} %Spacing between value and its unit
+\usepackage{gauss}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{dcolumn}
+
+\usepackage[format=hang,font=small,labelfont=bf]{caption}
+\captionsetup{justification = raggedright, singlelinecheck = false, }
+
+\usepackage{endnotes}
+\let\fnote\footnote
+
+%\usepackage{pdflscape}
+\usepackage{epstopdf}
+%\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage[right]{eurosym}
+%\usepackage{setspace}	%package used to make double space between lines
+\usepackage{longtable}
+\usepackage[flushleft]{threeparttable}
+\usepackage{rotating}
+
+\definecolor{darkblue}{rgb}{0.055,0.094,0.588}
+\definecolor{darkred}{rgb}{0.4,0,0.0157}
+\definecolor{myblue}{rgb}{0.2,0.2,0.7}
+\definecolor{myred}{rgb}{0.9,0,0}
+\newcommand{\jemph}[1]{{\color{myblue}#1}}
+\newcommand{\remph}[1]{{\color{myred}#1}}
+
+%\newcommand\fnote[1]{\captionsetup{font=footnotesize}\caption*{#1}}
+
+\newcommand{\commentbox}[1]{\fcolorbox{red}{yellow}{\begin{minipage}{\textwidth}
+			\begin{footnotesize}#1\end{footnotesize}\end{minipage}}}
+
+\usepackage{chngcntr}
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{section}
+
+\usepackage[affil-it]{authblk}
+
+%\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\newcommand{\samecolor}{0,0,.8}
+\hypersetup{
+	colorlinks = true, %Colours links instead of ugly boxes
+	urlcolor   = darkblue, %Colour for external hyperlinks
+	linkcolor  = darkblue, %Colour of internal links
+	citecolor  = darkblue   %Colour of citations
+}
+
+\usepackage[nameinlink,capitalize]{cleveref}
+
+\newcommand\PlaceInsert[1]{
+	\begin{center}
+		\framebox{Insert \Cref{#1} here.}
+	\end{center}
+	\bigskip}
+
+
+\newlength{\drop}
+
+\usepackage{subfiles}
