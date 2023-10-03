@@ -5,17 +5,10 @@
 	right=20mm,
 	top=20mm,
 	bottom=20mm
-	%layouthoffset=2mm, % Bleed
-	%layoutvoffset=3mm,  % Bleed
-	%layoutheight=297mm,
-	%layoutwidth=210mm
 }
 
 
 % Fonts
-%\usepackage[T1]{fontenc}
-%\usepackage{lmodern}
-%\renewcommand{\familydefault}{\sfdefault}
 \usepackage[T1]{fontenc}
 \usepackage[scaled]{helvet}
 \renewcommand*{\familydefault}{\sfdefault}
@@ -65,14 +58,14 @@
 %\renewcommand{\chapter}[2][]{\oldchapter[#1]{#2}\vspace{\fill}\par\pagebreak}
 
 \usepackage[ngerman,english]{babel}
-\usepackage{breakurl}
+%\usepackage{breakurl} % not required with pdflatex
 
 \usepackage{graphicx}
 %\usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsmath, bm}
 \usepackage{hyphenat}
-\usepackage{siunitx} %Spacing between value and its unit
+\usepackage{siunitx} % spacing between value and its unit
 \usepackage{gauss}
 \usepackage{float}
 \usepackage{pdflscape}
@@ -93,7 +86,7 @@
 %\usepackage{subfig}
 \usepackage{booktabs}
 \usepackage[right]{eurosym}
-%\usepackage{setspace}	%package used to make double space between lines
+%\usepackage{setspace}	% package used to make double space between lines
 \usepackage{longtable}
 \usepackage[flushleft]{threeparttable}
 \usepackage{rotating}
@@ -105,8 +98,6 @@
 \newcommand{\jemph}[1]{{\color{myblue}#1}}
 \newcommand{\remph}[1]{{\color{myred}#1}}
 
-%\newcommand\fnote[1]{\captionsetup{font=footnotesize}\caption*{#1}}
-
 \newcommand{\commentbox}[1]{\fcolorbox{red}{yellow}{\begin{minipage}{\textwidth}
 			\begin{footnotesize}#1\end{footnotesize}\end{minipage}}}
 
@@ -116,14 +107,13 @@
 
 \usepackage[affil-it]{authblk}
 
-%\usepackage[hidelinks]{hyperref}
 \usepackage{hyperref}
 \newcommand{\samecolor}{0,0,.8}
 \hypersetup{
-	colorlinks = true, %Colours links instead of ugly boxes
-	urlcolor   = darkblue, %Colour for external hyperlinks
-	linkcolor  = darkblue, %Colour of internal links
-	citecolor  = darkblue   %Colour of citations
+	colorlinks = true,     % Colours links instead of ugly boxes
+	urlcolor   = darkblue, % Colour for external hyperlinks
+	linkcolor  = darkblue, % Colour of internal links
+	citecolor  = darkblue  % Colour of citations
 }
 
 \usepackage[nameinlink,capitalize]{cleveref}

@@ -1,9 +1,10 @@
-\documentclass[11pt,oneside]{article}
+\documentclass[11pt,twoside]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage{easyReview}
 \input{hsf_preamble}
 \usepackage[]{blindtext}
+\usepackage{csquotes}
 
 \usepackage[style=apa,backend=biber,natbib=true,uniquename=false,pagetracker=true]{biblatex}
 \addbibresource{paper.bib}
@@ -23,128 +24,129 @@
 \newcommand{\titelderarbeit}{Hier den Titel der Arbeit einfügen}
 
 \begin{document}
-	
-	\selectlanguage{ngerman}
-	\pagenumbering{roman}
 
-	\begin{titlepage}
-		\begin{tikzpicture}[remember picture,overlay]
-			\node[anchor=north east,yshift=-1.25cm,xshift=-1.5cm]
-			at (current page.north east)
-			{\includegraphics[width=0.25\textwidth]{./onlineplus}};
-		\end{tikzpicture}
+\selectlanguage{ngerman}
+\pagenumbering{roman}
 
-		\vspace{4cm}
-		\centering
-		Hochschule Fresenius\\
-		Fachbereich onlineplus\\
-		
-		Studiengang: Studiengang\\
-		
-		\vspace*{3cm}
-		Art der Arbeit (Hausarbeit, \ldots)
-		\vspace*{1cm}
-		
-		{\textbf{\huge{\titelderarbeit}}}
-		
-		\vspace*{2cm}	
-		
-		Vorname Name \\
-		Matrikelnummer: xxx\\
+\begin{titlepage}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north east,yshift=-1.25cm,xshift=-1.5cm]
+		at (current page.north east)
+		{\includegraphics[width=0.25\textwidth]{./onlineplus}};
+	\end{tikzpicture}
 
-		\vspace*{1cm}	
-		Modul: xxx\\
-		Dozent: xxx\\
-		Abgabedatum: xxx
-		
-		\vspace*{.5cm}	
-	\end{titlepage}
-	
-	\clearpage
-	
-	\linespread{\toclinespread}
+	\vspace{4cm}
+	\centering
+	Hochschule Fresenius\\
+	Fachbereich onlineplus\\
 
-	\tableofcontents{}
-	\clearpage
-	\listoffigures
-	\clearpage
-	\listoftables
-	\clearpage
+	Studiengang: Studiengang\\
 
-	\linespread{\commonlinespread}
+	\vspace*{3cm}
+	Art der Arbeit (Hausarbeit, \ldots)
+	\vspace*{1cm}
 
-	\pagenumbering{arabic}
-	
-	\section{Einleitung}\label{sec:einleitung}
+	{\textbf{\huge{\titelderarbeit}}}
 
-	\citet[1]{lebowski1998} \blindtext % Ein Zitat und Text
+	\vspace*{2cm}
 
-	\section{Kapitel}\label{sec:kapitel}
-	\blindtext
+	Vorname Name \\
+	Matrikelnummer: xxx\\
 
-	\subsection{Unterkapitel A}\label{subsec:unterkapitel-a}
-	Beispiel für eine Abbildung: \\
-	\begin{figure}[H]
-	    \caption{Studierende nach Bundesland}
-	    \label{fig:studis}
-	    \includegraphics[width=6cm]{studierende_nach_bundesland}
-		\footnotesize \\ Quelle: eigene Darstellung in Anlehnung an Statistisches Bundesamt, 2023
-	\end{figure}
+	\vspace*{1cm}
+	Modul: xxx\\
+	Dozent: xxx\\
+	Abgabedatum: xxx
 
-	\subsection{Unterkapitel B}\label{subsec:unterkapitel-b}
+	\vspace*{.5cm}
+\end{titlepage}
 
-	Beispiel für eine Tabelle: \\
+\clearpage
 
-	\begin{table}[H]
-	   	\caption{Studierende nach Bundesland und Geschlecht}
-		\begin{tabular}{|l|r|r|r|}
-			\toprule
-			\textbf{Bundesland} & \textbf{männlich} & \textbf{weiblich} & \textbf{Insgesamt} \\
-			\midrule
-			Baden-Württemberg & 27830 & 28030 & 55860 \\
-			Bayern & 32917 & 32462 & 65379 \\
-			Berlin & 13056 & 14964 & 28020 \\
-			Brandenburg & 3813 & 3864 & 7677 \\
-			Bremen & 2846 & 3014 & 5860 \\
-			Hamburg & 6498 & 7511 & 14009 \\
-			Hessen & 14560 & 16291 & 30851 \\
-			Mecklenburg-Vorpommern & 2199 & 2871 & 5070 \\
-			Niedersachsen & 12304 & 14116 & 26420 \\
-			Nordrhein-Westfalen & 43088 & 46238 & 89326 \\
-			Rheinland-Pfalz & 6185 & 7459 & 13644 \\
-			Saarland & 2426 & 2440 & 4866 \\
-			Sachsen & 7666 & 8257 & 15923 \\
-			Sachsen-Anhalt & 3261 & 3577 & 6838 \\
-			Schleswig-Holstein & 4594 & 4422 & 9016 \\
-			Thüringen & 7542 & 11943 & 19485 \\
-			\bottomrule
-		\end{tabular}
-		\footnotesize \\\\ Quelle: eigene Darstellung in Anlehnung an Statistisches Bundesamt, 2023
-		\label{tab:studis}
-	\end{table}
+\linespread{\toclinespread}
 
-	\clearpage
-	\printbibliography[heading=bibintoc]
-	
-	\clearpage
-	\textbf{Eidesstattliche Erklärung}\\
-	
-	Hiermit versichere ich, dass ich die vorliegende Arbeit mit dem Titel ``\titelderarbeit''
-	selbstständig und ohne fremde Hilfe verfasst und keine anderen als die angegebenen Hilfsmittel
-	verwendet habe.\\
-	
-	Die Stellen der Arbeit, einschließlich Tabellen und Abbildungen, die anderen Werken dem Wortlaut
-	oder dem Sinn nach entnommen sind, habe ich in jedem einzelnen Fall kenntlich gemacht und die
-	Herkunft nachgewiesen.\\
+\tableofcontents{}
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
 
-	Die Arbeit hat in gleicher oder ähnlicher Form noch keiner anderen Prüfungsbehörde vorgelegen und
-	wurde noch nicht veröffentlicht.\\
-	
-	
-	\vspace{1.5cm}
-	\begin{tabular}{@{}p{4cm}p{1cm}p{8cm}@{}}
-		\hrulefill	& & \hrulefill \\
-		Ort/Datum	& & Eigenhändige Unterschrift \\
+\linespread{\commonlinespread}
+
+\pagenumbering{arabic}
+
+\section{Einleitung}\label{sec:einleitung}
+
+\citet[1]{lebowski1998} \blindtext % Ein Zitat und Text
+
+\section{Kapitel}\label{sec:kapitel}
+\blindtext
+
+\subsection{Unterkapitel A}\label{subsec:unterkapitel-a}
+Beispiel für eine Abbildung: \\
+\begin{figure}[H]
+	\caption{Studierende nach Bundesland}
+	\label{fig:studis}
+	\includegraphics[width=6cm]{studierende_nach_bundesland}
+	\footnotesize
+	Quelle: eigene Darstellung in Anlehnung an Statistisches Bundesamt, 2023
+\end{figure}
+
+\subsection{Unterkapitel B}\label{subsec:unterkapitel-b}
+
+Beispiel für eine Tabelle: \\
+
+\begin{table}[H]
+	\caption{Studierende nach Bundesland und Geschlecht}
+	\begin{tabular}{|l|r|r|r|}
+		\toprule
+		\textbf{Bundesland}    & \textbf{männlich} & \textbf{weiblich} & \textbf{Insgesamt} \\
+		\midrule
+		Baden-Württemberg      & 27830             & 28030             & 55860              \\
+		Bayern                 & 32917             & 32462             & 65379              \\
+		Berlin                 & 13056             & 14964             & 28020              \\
+		Brandenburg            & 3813              & 3864              & 7677               \\
+		Bremen                 & 2846              & 3014              & 5860               \\
+		Hamburg                & 6498              & 7511              & 14009              \\
+		Hessen                 & 14560             & 16291             & 30851              \\
+		Mecklenburg-Vorpommern & 2199              & 2871              & 5070               \\
+		Niedersachsen          & 12304             & 14116             & 26420              \\
+		Nordrhein-Westfalen    & 43088             & 46238             & 89326              \\
+		Rheinland-Pfalz        & 6185              & 7459              & 13644              \\
+		Saarland               & 2426              & 2440              & 4866               \\
+		Sachsen                & 7666              & 8257              & 15923              \\
+		Sachsen-Anhalt         & 3261              & 3577              & 6838               \\
+		Schleswig-Holstein     & 4594              & 4422              & 9016               \\
+		Thüringen              & 7542              & 11943             & 19485              \\
+		\bottomrule
 	\end{tabular}
-	
+	\footnotesize \\\\ Quelle: eigene Darstellung in Anlehnung an Statistisches Bundesamt, 2023
+	\label{tab:studis}
+\end{table}
+
+\clearpage
+\printbibliography[heading=bibintoc]
+
+\clearpage
+\textbf{Eidesstattliche Erklärung}\\
+
+Hiermit versichere ich, dass ich die vorliegende Arbeit mit dem Titel ``\titelderarbeit''
+selbstständig und ohne fremde Hilfe verfasst und keine anderen als die angegebenen Hilfsmittel
+verwendet habe.\\
+
+Die Stellen der Arbeit, einschließlich Tabellen und Abbildungen, die anderen Werken dem Wortlaut
+oder dem Sinn nach entnommen sind, habe ich in jedem einzelnen Fall kenntlich gemacht und die
+Herkunft nachgewiesen.\\
+
+Die Arbeit hat in gleicher oder ähnlicher Form noch keiner anderen Prüfungsbehörde vorgelegen und
+wurde noch nicht veröffentlicht.\\
+
+
+\vspace{1.5cm}
+\begin{tabular}{@{}p{4cm}p{1cm}p{8cm}@{}}
+	\hrulefill &  & \hrulefill                \\
+	Ort/Datum  &  & Eigenhändige Unterschrift \\
+\end{tabular}
+
 \end{document}
